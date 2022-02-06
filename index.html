@@ -1,0 +1,252 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso CSS</title>
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      color: rgb(249, 250, 244);
+    }
+  </style>
+</head>
+
+<body>
+  <article id="temario-css">
+    <h1 style="color: rgb(255, 255, 255);">Aprendiendo CSS</h1>
+    <p><i style="font-weight: bold; color: orangered;">Cascadin style sheet</i> - Hojas
+      de estilo en cascada</p>
+    <h2>Temario del Curso</h2>
+    <ul>
+      <li><a href="index.html#selectores-basicos">Selectores básicos</a></li>
+      <li><a href="index.html#selectores-avanzados">Selectores avanzados</a></li>
+      <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
+      <li><a href="index.html#pseudoelementos">Pseudoelemntos</a></li>
+      <li><a href="index.html#agrupar-selectores">Agrupar Selectores</a></li>
+      <li><a href="index.html#algoritmo-css">El algoritmo de CSS</a></li>
+      <li><a href="index.html#reseteo-normalizacion">Reseteo y Normalización de Estilos</a></li>
+      <li><a href="index.html#prefijos-navegadores">Prefijo de Navegadores</a></li>
+      <li><a href="box-model.html">Modelo de Caja</a></li>
+      <li><a href="positions.html">Posicionamiento en CSS</a></li>
+      <li><a href="positions-examples.html#">Ejercicios de Posicionamiento CSS</a></li>
+      <li><a href="index.html#"></a></li>
+    </ul>
+  </article>
+  <hr>
+  <article id="selectores-basicos">
+    <h2 id="selectores-basicos">Selectores Básicos</h2>
+    <p>Un selector CSS es la primera parte de una regla CSS. Es un patrón de elementos y otros términos que indican al
+      navegador qué elementos HTML se seleccionan para aplicarles una regla que incluye los valores de las propiedades
+      CSS. El
+      elemento o los elementos seleccionados por el selector se denominan sujeto del selector.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus soluta porro ipsum quaerat in
+      reprehenderit hic rerum molestias temporibus quasi ipsam, atque neque, praesentium repellendus similique
+      reiciendis vero animi!
+    </p>
+    <p id="parrafo-dos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat nostrum provident, velit
+      exercitationem quidem
+      sequi, quam delectus aliquid labore beatae itaque expedita necessitatibus, perspiciatis quaerat nihil soluta
+      doloremque saepe quis.
+    </p>
+    <p class="text-32 bg-skyblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at explicabo dolor
+      earum
+      praesentium
+      minus iusto qui voluptatum itaque, non cupiditate id, aspernatur dolorum et ipsa consequuntur repellendus
+      exercitationem error.
+    </p>
+    <p class="text-20 bg-steelblue text-white">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate magnam ducimus? Hic tenetur officia
+      nisi? Tempore voluptate, dolorum dicta sint, delectus ipsam illo, iste cupiditate sit quo quos incidunt?
+    </p>
+
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <article id="selectores-avanzados">
+    <h2 class="encabezados">Selectores Avanzados</h2>
+    <p>CSS define otros selectores más avanzados que permiten simplificar las hojas de estilos.</p>
+    <h3>Selectores de hijos</h3>
+    <h4>Selector de hijos directos</h4>
+    <ul class="hijos-directos">
+      <b>Hola</b>
+      <li><b>Primavera</b></li>
+      <li><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h4>Selector de hijos descendientes</h4>
+    <ul class="hijos-descendientes">
+      <li><b>Primavera</b></li>
+      <li><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h3>Selectores de hermanos</h3>
+    <h4>Selectores de hermanos (En general)</h4>
+    <ul>
+      <li><b>Primavera</b></li>
+      <li class="hermanos-general"><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h4>Selectores de hermanos adyacente</h4>
+    <ul>
+      <li><b>Primavera</b></li>
+      <li class="hermanos-adyacentes"><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h3>Selectores de atributo</h3>
+    <nav class="selectores-atributos">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+        <li><a class="menu-item cursos button " href="https://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+        <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+        <li><a href="https://jonmircha.com/cv" target="_blank">Cv</a></li>
+        <li><a class="menu item ahora button" href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+        <li><a class="menu-item notas button " href="https://jonmircha.com/notas" target="_blank">Notas</a></li>
+        <li><a href="index.html#temario-css">Regresar al temario</a></li>
+      </ul>
+    </nav>
+    <h3>Selector Universal (*)</h3>
+    <ul class="selector-universal">
+      <li><b>Primavera</b></li>
+      <li><b>Verano</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <article id="pseudoclases">
+    <h2 class="encabezados">Pseudoclases</h2>
+    <p>Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del
+      elemento
+      seleccionado. Por ejemplo, :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado
+      por el
+      selector.</p>
+    <form class="form-pseudoclases">
+      <input type="text" name="nombre" placeholder="escribe tu nombre" required>
+      <br>
+      <input type="email" name="correo" placeholder="escribe tu correo" required>
+      <br>
+      <input type="submit">
+      <input type="submit" disabled>
+    </form>
+    <nav class="menu-pseudoclases">
+      <a href="#seccion1">Sección 1</a>
+      <a href="#seccion2">Sección 2</a>
+      <a href="#seccion3">Sección 3</a>
+      <a href="#seccion4">Sección 4</a>
+    </nav>
+    <p class="p-pseudoclases"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta corporis,
+      praesentium temporibus quidem
+      tempora, rerum modi numquam voluptas nihil expedita velit atque quisquam dolor quasi quod ipsam assumenda at.
+    </p>
+    <ol class="lista-pseudoclases">
+      <li>Mú de Aries</li>
+      <li>Aldebarán de Tauro</li>
+      <li>Saga & Kanon de Géminis</li>
+      <li>Death Mask de Cáncer</li>
+      <li>Aioria de Leo</li>
+      <li>Shaka de Virgo</li>
+      <li>Dohko de Libra</li>
+      <li>Milo de Escorpión</li>
+      <li>Aiorios de Sagitario</li>
+      <li>Shura de Capricornio</li>
+      <li>Camus de Acuario</li>
+      <li>Afrodita de Piscis</li>
+    </ol>
+    <article class="articulo-pseudoclases">
+      <header>Esto es una header</header>
+      <p>Esto es un p</p>
+      <div>Esto es una div</div>
+      <p>Esto es un p</p>
+      <section>Esto es una Section</section>
+      <p>Esto es un p</p>
+      <div>Esto es una div</div>
+      <p>Esto es un p</p>
+      <footer>Esto es un footer</footer>
+    </article>
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <article id="pseudoelementos">
+    <h2 class="encabezados">Pseudoelementos</h2>
+    <p>Al igual que las pseudo-classes, los pseudo-elementos se añaden a los selectores, pero en cambio, no describen un
+      estado
+      especial sino que, permiten añadir estilos a una parte concreta del documento. Por ejemplo, el pseudoelemento
+      ::first-line selecciona solo la primera línea del elemento especificado por el selector.</p>
+    <p><i>Bandai Mith CLOTH ex </i><span class="saga-geminis">Saga Géminis</span>
+      <span class="saga-precio">500</span>
+    </p>
+    <p class="p-pseudoelementos">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis deserunt nisi eveniet incidunt temporibus
+      labore fugit libero explicabo architecto repellat? Soluta reiciendis exercitationem libero vero consequuntur? Non
+      molestias quae corporis!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis deserunt nisi eveniet incidunt temporibus
+      labore fugit libero explicabo architecto repellat? Soluta reiciendis exercitationem libero vero consequuntur? Non
+      molestias quae corporis!
+    </p>
+    <input class="input-pseudoelementos" type="text" name="nombre" placeholder="@nombre">
+    <br>
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <article id="agrupar-selectores">
+    <h2 class="encabezados">Agrupar Selectores</h2>
+    <p>Los selectores pueden agruparse para formar nuevos tipos de selectores. De esta manera podemos seleccionar varios
+      tipos
+      de etiquetas al mismo tiempo o hacer una selección más específica de algunas etiquetas.</p>
+    <form class="form-agrupar-selectores">
+      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+      <input type="email" name="correo" placeholder="Escribe tu correo">
+      <textarea name="comentarios" placeholder="Dejanos tus comentarios" cols="30" rows="10"></textarea>
+      <input type="submit" value="Envíar">
+    </form>
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <article id="algoritmo-css">
+    <h2>El algoritmo de CSS</h2>
+    <ul>
+      <li>La cascada</li>
+      <li>La especificidad</li>
+      <li>La herencia</li>
+    </ul>
+    <blockquote id="cita-marco" class="cita-marco" style="background-color: rebeccapurple;">
+      Se tolerante con los demás y estricto contigo mismo<cite>Marco Aurelio</cite>
+    </blockquote>
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <article id="reseteo-normalizacion">
+    <h2 class="encabezados">Reseteo y Normalización de Estilos</h2>
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <article id="prefijos-navegadores">
+    <h2 class="encabezados">Prefijo de Navegadores</h2>
+    <ul>
+      <li>Navegadores de Microsoft <code><b>-ms-</b></code></li>
+      <li>Firefox <code><b>-mz-</b></code></li>
+      <li>Todos los demás navegadores <code><b>-webkit-</b></code></li>
+    </ul>
+    <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  </article>
+  <hr>
+  <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  <hr>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+/* Este es un comentario de CSS
+1) el selector
+2) Bloque de declaraciones {
+atributo: valor;
+atributo-de-mas-de-dos-palabras: otro-valor;
+} */
+
+/* @import  es una mala practica ya que son bloqueantes a la hora de que el navegador lea nuestra página */
+
+@import url(otra-hoja.css);
+
+h1 {
+  color: orangered;
+  background-color: black;
+}
+
+/* Links de referncia y documentación:   
+  - https://es.wikipedia.org/wiki/Hoja_de_estilo_en_cascada
+  - https://www.w3.org/html/logo/
+  - https://www.w3.org/standards/webdesig...
+  - https://www.w3.org/TR/css-2020/
+  - https://developer.mozilla.org/es/docs...
+🔵 CSS Reference - https://cssreference.io/
+🔵 Can I Use - https://caniuse.com/
+🔵 Code Guide - https://codeguide.co/
+🔵 Pseudoclases - https://developer.mozilla.org/es/docs...
+🔵 Pseudoelementos - https://developer.mozilla.org/es/docs...
+🔵 Propiedades hederables - https://web.dev/learn/css/inheritance...
+🔵 Reset CSS - https://meyerweb.com/eric/tools/css/r...
+🔵 Normalize CSS - https://necolas.github.io/normalize.css/
+🔵 Autoprefixer CSS - https://autoprefixer.github.io/
+🔵 Modelo de Caja - https://developer.mozilla.org/es/docs...
+🔵 Tamaño de Caja Paul Irish - https://www.paulirish.com/2012/box-si...
+🔵 960 Grid System - https://960.gs/ */
+
+/* 
+Selectores básicos
+ 1)Etiquetas
+ 2)Identificadores
+ 3)Clases
+
+*/
+
+/* Dar estilos con ID se considera un antipatrón*/
+#parrafo-dos {
+  background-color: skyblue;
+}
+
+/* Dar estilos con clases nos permite reutilizar nuestro código CSS*/
+.text-20 {
+  font-size: 20px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-steelblue {
+  background-color: steelblue;
+}
+
+.text-white {
+  color: white;
+}
+
+.hijos-directos > li {
+  background-color: thistle;
+}
+
+.hijos-descendientes b {
+  background-color: thistle;
+}
+
+p {
+  color: black;
+  font-size: x-large;
+}
+
+.encabezados {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.volver-a-inicio {
+  border-color: blue;
+  margin-left: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+/*Los selectores de hermanos van a aplicar a los elementos que son hermanos y estén 
+por debajo del elemento de referencia */
+
+.hermanos-general ~ li {
+  background-color: thistle;
+}
+
+.hermanos-adyacentes + li {
+  background-color: thistle;
+}
+
+/*Selectores de atributos  */
+
+.selectores-atributos a[href] {
+  color: orangered;
+}
+
+.selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+}
+
+/* El comodín del *aplica el estilo si contiene la texto en cuestión en cualquier parte */
+.selectores-atributos a[href*="jonmircha"] {
+  font-size: 24px;
+}
+
+/* El comodín del ^aplica el estilo si contiene el texto en cuestión al inicio */
+.selectores-atributos a[href^="http://"]
+{
+  text-decoration: none;
+}
+
+/* El comodín del $ aplica el estilo si contiene el texto en cuestión al final*/
+.selectores-atributos a[href$=".com"] {
+  background-color: black;
+}
+
+/* El comodín del ~aplica el estilo si contiene el texto en cuestión en una lista separada por espacios*/
+.selectores-atributos a[class~="cursos"] {
+  background-color: midnightblue;
+}
+
+/* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios
+y despues del texto en cestion venga un guión medio -*/
+.selectores-atributos a[class|="menu"] {
+  font-style: italic;
+}
+
+/* Selector Universal */
+* {
+  font-family: sans-serif;
+}
+
+.selector-universal * {
+  font-size: 24px;
+}
+
+/* Las pseudoclases dan estilo dependiendo del contexto, posición o estado del elemento
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes */
+
+.form-pseudoclases *:required {
+  border-color: yellow;
+}
+
+.form-pseudoclases *:valid {
+  border-color: green;
+}
+
+.form-pseudoclases *:invalid {
+  border-color: red;
+}
+
+.form-pseudoclases *:focus {
+  background-color: skyblue;
+}
+
+.form-pseudoclases *:disabled {
+  background-color: pink;
+}
+
+.menu-pseudoclases a:visited {
+  color: olive;
+}
+
+.menu-pseudoclases a:hover {
+  color: orange;
+}
+
+.p-pseudoclases:hover {
+  font-size: 22px;
+}
+
+#temario-css:target {
+  background-color: rgb(209, 206, 45);
+}
+
+.lista-pseudoclases li:first-child {
+  color: green;
+}
+
+.lista-pseudoclases li:last-child {
+  color: violet;
+}
+
+.lista-pseudoclases li:nth-child(3) {
+  color: blue;
+}
+
+.lista-pseudoclases li:nth-child(4) {
+  font-size: 22px;
+}
+
+.lista-pseudoclases li:nth-child(3n + 1) {
+  font-weight: bold;
+}
+
+.lista-pseudoclases li:nth-child(3n + 1) {
+  background-color: yellow;
+}
+
+.lista-pseudoclases li:nth-child(even) {
+  background-color: yellow;
+}
+
+.lista-pseudoclases li:nth-child(odd) {
+  background-color: orange;
+}
+
+.articulo-pseudoclases p:first-of-type {
+  background-color: pink;
+}
+
+.articulo-pseudoclases p:last-of-type {
+  background-color: violet;
+}
+
+.articulo-pseudoclases p:nth-of-type(3) {
+  background-color: fuchsia;
+}
+
+.articulo-pseudoclases *:not(p) {
+  background-color: beige;
+}
+/* PSEUDOELEMENTOS 
+Al igual que las pseudo-classes, los pseudo-elementos se añaden a los selectores, pero en cambio, no describen un estado especial sino que, permiten añadir estilos a una parte concreta del documento. Por ejemplo, el pseudoelemento ::first-line selecciona solo la primera línea del elemento especificado por el selector. */
+
+.saga-geminis::before {
+  content: "🤼‍♂️";
+}
+
+.saga-geminis::after {
+  content: "♊";
+}
+
+.saga-precio::before {
+  content: "$";
+  font-weight: bold;
+}
+
+.saga-precio::after {
+  content: "USD";
+  font-weight: bold;
+}
+
+.p-pseudoelementos::first-letter {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.p-pseudoelementos::first-line {
+  color: coral;
+}
+
+.p-pseudoelementos::selection {
+  color: greenyellow;
+  background-color: black;
+}
+
+.input-pseudoelementos::placeholder {
+  color: green;
+}
+
+/* Agrupar Selectores */
+
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea {
+  border-color: yellow;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: black;
+  font-size: 20px;
+  display: block;
+  width: 300px;
+}
+
+/*
+El algoritmo de CSS: Es la forma en el que el Navegador aplica los estilos al 
+documento HTML. Es VITAL entender este cocepto para que entiendas como
+se aplican y en algunas ocasiones se sobreescriben las reglas CSS
+ 1) La cascada
+ 2) La especificidad
+ 3) La herencia-
+ 
+ La Cascada es el mecanismo en el que el navegador aplica los estilos, y toma en cuenta 
+ lo siguiente en este orden:
+ 1)El origen del código
+    - El User Agent (los estilos por defecto del navegador
+    - Personalizaciones del usuario
+    - Los estilos del autor
+ 2) La especificidad del Selector
+ 3) Orden de aparición
+ 
+ La especificidad es el peso que tiene un Selector cuando hay conflicto de estilos. Se 
+ calcula de la siguiente forma:
+ -Etiquetas y pseudoelementos---------------0,0,0,1
+ -Clases, atributos y pseudoclases -----------0,0,1,0
+ -Identificadores ------------------------------0,1,0,0
+ -Estilos en linea-------------------- ----------1,0,0,0
+ -Important------------------------------------Rompe la especificidad.
+
+ https://web.dev/learn/css/inheritance/#which-properties-are-inheritable
+ */
+
+blockquote {
+  background-color: burlywood;
+}
+
+#cita-marco {
+  background-color: lightgreen;
+}
+
+blockquote.cita-marco {
+  background-color: tomato;
+}
+
+.cita-marco {
+  background-color: cornflowerblue;
+}
+
+.cita-marco {
+  background-color: mediumaquamarine !important;
+}
+
+blockquote#cita-marco {
+  background-color: lightsalmon;
+}
+
+.cita-marco {
+  background-color: moccasin !important;
+  background-color: darkorange !important;
+  font-size: 32px;
+  border-style: dotted;
+  border-color: red;
+}
+
+.cita-marco cite {
+  background-color: pink;
+  background-color: inherit;
+  font-size: 24px;
+  font-size: initial;
+  border-style: inherit;
+  border-color: inherit;
+}
+
+/* 
+https://autoprefixer.github.io/
+https://caniuse.com/
+
+Prefijo de los navegadores:
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+ user-select: none; 
+  */
