@@ -185,13 +185,12 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes */
 }
 
 #temario-css:target {
-  background-color: rgb(209, 206, 45);
+  background-color: rgb(11, 124, 216);
 }
 
 .lista-pseudoclases li:first-child {
   color: green;
 }
-
 .lista-pseudoclases li:last-child {
   color: violet;
 }
