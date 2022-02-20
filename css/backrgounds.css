@@ -2,12 +2,11 @@
 backround-color: define el color de fonde del elemnto.
 background-image: define la imagen de fondo el elemento
 backgound-size: define el tamaño de la imagen de fondo, primer valor x, segundo y.
--cover cambia el tamaño de la imagen de fondo para asegurarse de que  permanezca completamente visible.
--contain cambia el tamaño de la imagen de fondo para asegurarse de que el  elemento  esté completamente cubierto.
+ -  cover cambia el tamaño de la imagen de fondo para asegurarse de que  permanezca completamente visible.
+ -  contain cambia el tamaño de la imagen de fondo para asegurarse de que el  elemento  esté completamente cubierto.
 background-repeat: define como se repite la imagen de fondo en el  elemento. 
-background-position:
-  define la posición de la imagen de fondo, primer valor x, segundo y, si no se especifica un segundo valor este será center.
-  aparte de valores numéricos podemos indicar el posicionamiento con las palabras: center, top, bottom, left and right.
+background-position: define la posición de la imagen de fondo, primer valor x, segundo y, si no se especifica un segundo valor este será center.
+  Aparte de valores numéricos podemos indicar el posicionamiento con las palabras: center, top, bottom, left and right.
  background-clip: define cuánto debe extenderse el fondo dentro del elemnto.
  background-origin: define el origen de la imagen de fondo.
  background-attachment: define cómo se comportará la imagen de fondo al desplasarze por la página.
