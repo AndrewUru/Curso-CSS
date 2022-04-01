@@ -45,12 +45,15 @@ html {
 
 .transitions .box {
   background-color: magenta;
+  border-color: green;
   transition-property: background-color;
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0.5s;
   transition: border-color 2s linear 1s;
   transition: all 2s ease-in-out 250ms;
+  transition: background-color 2s ease-in-out 250ms,
+    border-color 2s ease-in-out 250ms, border-radius 2s ease-in-out 250ms;
 }
 
 .transitions .box:hover {
@@ -58,4 +61,33 @@ html {
   border-color: red;
   border-radius: 2rem;
   /* border-style: dashed; */
+}
+
+.transitions .card {
+  transition: opacity 1s ease-out, border-color 3s steps(3),
+    filter 2s ease-in 1s, box-shadow 1.5s linear 2s;
+}
+
+.transitions .card:hover {
+  opacity: 0.75;
+  border-color: orchid;
+  filter: blur(0.15rem);
+  box-shadow: 1rem 1rem 0.5rem #000;
+}
+
+.transitions .card img {
+  transition: object-postion 2s ease-in-out 3s;
+}
+
+.transitions .card img:hover {
+  object-position: 100% 50%;
+}
+
+.transform-2d img {
+  transition: transform 2s ease-in-out;
+  transform: none;
+  transform: translateX(4rem);
+}
+
+.transform-2d img:hover {
 }
