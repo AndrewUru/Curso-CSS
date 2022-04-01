@@ -10,7 +10,7 @@ atributo-de-mas-de-dos-palabras: otro-valor;
 @import url(otra-hoja.css);
 
 h1 {
-  color: orangered;
+  color: rgba(255, 102, 46, 0.815);
   background-color: black;
 }
 

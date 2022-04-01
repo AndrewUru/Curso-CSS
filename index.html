@@ -22,8 +22,15 @@
 <body>
   <article id="temario-css">
     <h1 style="color: rgb(255, 255, 255);">Aprendiendo CSS</h1>
-    <p><i style="font-weight: bold; color: orangered;">Cascadin style sheet</i> - Hojas
-      de estilo en cascada</p>
+    <p><i style="font-size: 4rem; font-weight: bold; color: rgba(238, 0, 59, 0.781);">Cascadin Style Sheet</i>
+      "Hojas
+      de estilo en cascada"</p>
+    <p>Se utiliza para diseñar y diseñar páginas web, por ejemplo, para modificar la fuente,
+      el color, el tamaño y el espaciado de su contenido, dividirlo en varias columnas o agregar animaciones y otras
+      características decorativas. Este módulo proporciona un comienzo suave en su camino hacia el dominio de CSS con
+      los
+      conceptos básicos de cómo funciona, cómo se ve la sintaxis y cómo puede comenzar a usarla para agregar estilo a
+      HTML.</p>
     <h2>Temario del Curso</h2>
     <ul>
       <li><a href="index.html#selectores-basicos">Selectores básicos</a></li>
@@ -59,26 +66,31 @@
     <h2 id="selectores-basicos">Selectores Básicos</h2>
     <p>Un selector CSS es la primera parte de una regla CSS. Es un patrón de elementos y otros términos que indican al
       navegador qué elementos HTML se seleccionan para aplicarles una regla que incluye los valores de las propiedades
-      CSS. El
-      elemento o los elementos seleccionados por el selector se denominan sujeto del selector.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus soluta porro ipsum quaerat in
-      reprehenderit hic rerum molestias temporibus quasi ipsam, atque neque, praesentium repellendus similique
-      reiciendis vero animi!
+      CSS. El elemento o los elementos seleccionados por el selector se denominan sujeto del selector.</p>
+    <p>En CSS los selectores se utilizan para delimitar los elementos HTML de nuestra página web a los que queremos
+      aplicar
+      estilo. Hay una amplia variedad de selectores CSS, lo que permite una gran precisión a la hora de seleccionar
+      elementos
+      a los que aplicar estilo. En este artículo y sus subartículos veremos con detalle todos los tipos y el modo como
+      funcionan.
     </p>
-    <p id="parrafo-dos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat nostrum provident, velit
-      exercitationem quidem
-      sequi, quam delectus aliquid labore beatae itaque expedita necessitatibus, perspiciatis quaerat nihil soluta
-      doloremque saepe quis.
+    <p id="parrafo-dos">En CSS, los selectores se definen en la especificación de selectores de CSS correspondiente; al
+      igual que cualquier otro
+      elemento de CSS, es necesario que los navegadores los admitan para que funcionen. La mayoría de los selectores que
+      encontrarás se definen en especificación de nivel 3 de selectores, que es una especificación consolidada y, por lo
+      tanto, la mayoría de navegadores admitirán esos selectores.
     </p>
-    <p class="text-32 bg-skyblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at explicabo dolor
-      earum
-      praesentium
-      minus iusto qui voluptatum itaque, non cupiditate id, aspernatur dolorum et ipsa consequuntur repellendus
-      exercitationem error.
+    <p class="text-32 bg-skyblue">Si más de un elemento utiliza el mismo CSS, puedes combinar los selectores en una
+      lista de selectores para que la regla
+      se aplique a cada uno de los selectores individuales. Por ejemplo, si tengo el mismo CSS para un h1 y para una
+      clase
+      .special, los puedo escribir como dos reglas separadas.
     </p>
     <p class="text-20 bg-steelblue text-white">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate magnam ducimus? Hic tenetur officia
-      nisi? Tempore voluptate, dolorum dicta sint, delectus ipsam illo, iste cupiditate sit quo quos incidunt?
+      Hay diferentes agrupaciones de selectores, y conocer qué tipo de selector necesitas te ayudará a encontrar la
+      herramienta adecuada para tu trabajo. En estos subartículos vamos a ver los diferentes grupos de selectores con
+      más
+      detalle.
     </p>
 
   </article>
@@ -87,6 +99,7 @@
     <h2 class="encabezados">Selectores Avanzados</h2>
     <p>CSS define otros selectores más avanzados que permiten simplificar las hojas de estilos.</p>
     <h3>Selectores de hijos</h3>
+    <p>El combinador > selecciona los elementos que son hijos directos del primer elemento.</p>
     <h4>Selector de hijos directos</h4>
     <ul class="hijos-directos">
       <b>Hola</b>
@@ -160,9 +173,12 @@
       <a href="#seccion3">Sección 3</a>
       <a href="#seccion4">Sección 4</a>
     </nav>
-    <p class="p-pseudoclases"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta corporis,
-      praesentium temporibus quidem
-      tempora, rerum modi numquam voluptas nihil expedita velit atque quisquam dolor quasi quod ipsam assumenda at.
+    <p class="p-pseudoclases"> Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un elemento
+      no sólo en relación con el
+      contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador
+      (:visited, por ejemplo), el estado de su contenido (como :checked en algunos elementos de formulario), o la
+      posición del
+      ratón (como :hover que permite saber si el ratón está encima de un elemento o no).
     </p>
     <ol class="lista-pseudoclases">
       <li>Mú de Aries</li>
@@ -202,12 +218,11 @@
       <span class="saga-precio">500</span>
     </p>
     <p class="p-pseudoelementos">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis deserunt nisi eveniet incidunt temporibus
-      labore fugit libero explicabo architecto repellat? Soluta reiciendis exercitationem libero vero consequuntur? Non
-      molestias quae corporis!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis deserunt nisi eveniet incidunt temporibus
-      labore fugit libero explicabo architecto repellat? Soluta reiciendis exercitationem libero vero consequuntur? Non
-      molestias quae corporis!
+      Por ejemplo, está claro que una «parte de nuestro documento» podría ser «la primera línea de un párrafo», «la
+      primera
+      letra de un párrafo» o «la selección que ha hecho el usuario». Pero los pseudo-elementos también son una forma de
+      crear
+      contenido antes o después de un elemento de nuestro DOM a través de CSS.
     </p>
     <input class="input-pseudoelementos" type="text" name="nombre" placeholder="@nombre">
     <br>
@@ -230,6 +245,9 @@
   <hr>
   <article id="algoritmo-css">
     <h2>El algoritmo de CSS</h2>
+    <p>Uno de los conceptos básicos del CSS, la cascada es un algoritmo utilizado para determinar la prevalencia de
+      algunas
+      reglas CSS sobre otras.</p>
     <ul>
       <li>La cascada</li>
       <li>La especificidad</li>
@@ -243,11 +261,26 @@
   <hr>
   <article id="reseteo-normalizacion">
     <h2 class="encabezados">Reseteo y Normalización de Estilos</h2>
+    <p>Restablecimiento de CSS: un restablecimiento de CSS es un conjunto de estilos que carga antes que sus otros
+      estilos para
+      eliminar los estilos de navegador integrados. Cada navegador tiene su propia hoja de estilo de agente de usuario ,
+      que
+      emplea para hacer que los sitios web sin estilo sean más legibles.</p>
+    <p>Normalización de CSS: la normalización de CSS mejora la coherencia entre navegadores en el estilo predeterminado
+      del
+      elemento HTML del agente de usuario del navegador. Es un reemplazo compatible con HTML5 para el restablecimiento
+      de CSS
+      estándar.</p>
     <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
   </article>
   <hr>
   <article id="prefijos-navegadores">
     <h2 class="encabezados">Prefijo de Navegadores</h2>
+    <p>Se llaman prefijos de navegador o prefijos comerciales (vendor prefixes) a un prefijo que se antepone a una regla
+      CSS
+      destinado a que dicha regla sea leída y aplicada exclusivamente por un navegador concreto (por ejemplo Chrome)
+      pero no
+      por el resto de navegadores.</p>
     <ul>
       <li>Navegadores de Microsoft <code><b>-ms-</b></code></li>
       <li>Firefox <code><b>-mz-</b></code></li>
@@ -255,6 +288,28 @@
     </ul>
     <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
   </article>
+  <hr>
+  <article>
+    <h2 class="encabezados">Modelo de Caja</h2>
+    <p>Todo en CSS tiene una caja alrededor, y comprender estas cajas es clave para poder crear diseños con CSS o para
+      alinear
+      elementos con otros elementos. En este artículo, echaremos un vistazo más de cerca al modelo de cajas en CSS con
+      el que
+      vas a poder crear diseños de compaginación más complejos con una comprensión de cómo funciona y la terminología
+      relacionada.</p>
+    <a href="box-model.html">Modelo de Caja</a>
+  </article>
+  <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  <hr>
+  <article>
+    <h2>Posicionamiento en CSS</h2>
+    <p>Posicionamiento CSS es un módulo de CSS que define cómo posicionar elementos absoluta y relativamente en la
+      página.</p>
+    <a href="positions.html">Posicionamiento en CSS</a>
+  </article>
+  <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
+  <hr>
+  <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
   <hr>
   <a class="volver-a-inicio" href="index.html#temario-css">☝️</a>
   <hr>
