@@ -85,9 +85,153 @@ html {
 
 .transform-2d img {
   transition: transform 2s ease-in-out;
-  transform: none;
-  transform: translateX(4rem);
 }
 
 .transform-2d img:hover {
+  transform: none;
+  transform: translateX(4rem);
+  transform: translateY(4rem);
+  transform: translateY(-4rem);
+  transform: translateZ(4rem);
+  transform: translate(-4rem, 4rem);
+  transform: translate(50%, 50%);
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, 80px);
+  transform: scaleX(2);
+  transform: scaleY(0.5);
+  transform: scaleZ(1.5);
+  transform: scale(1.5, 1.5);
+  transform: scale(-1, -1);
+  transform: scale(-0.5, -0.5);
+  transform: rotateX(60deg);
+  transform: rotateX(90deg);
+  transform: rotateY(60deg);
+  transform: rotateY(90deg);
+  transform: rotateZ(60deg);
+  transform: rotateZ(-60deg);
+  transform: rotateZ(360deg);
+  transform: rotate(-360deg);
+  transform: skewX(20deg);
+  transform: skewX(-20deg);
+  transform: skewY(20deg);
+  transform: skewY(-20deg);
+  transform: skew(20deg, 20deg);
+  /* 
+matrix( scaleX(), skewx(), scaleY(), translateX(), translateY() ) 
+https://developer.mozilla.org/es/docs/Web/CSS/transform-function
+*/
+  transform: matrix(1, 2, 2, 1, 20, 10);
+  transform: translate(25%, 50%);
+  transform: translate(25%, 50%) rotate(240deg) skew(10deg, 20deg)
+    scale(-0.5, -0.5);
+}
+
+.transform-3d {
+  perspective: 10rem;
+}
+
+.transform-3d img {
+  transition: transform 2s ease-in-out;
+}
+
+.transform-3d img:hover {
+  transform: translateZ(4rem);
+  transform: perspective(1000px) translateZ(4rem);
+  transform: perspective(100rem) translateZ(4rem);
+  transform: perspective(10rem) translateZ(4rem);
+  transform: perspective(10rem) translateZ(-4rem);
+  transform: translateZ(4rem);
+  transform: translateZ(-4rem);
+  transform: translate3d(2rem, 50%, -3rem);
+  transform: scaleZ(1.5);
+  transform: scale3d(2, 0.5, 3);
+  transform: rotateX(360deg);
+  transform: rotateX(90deg);
+  transform: rotateY(90deg);
+  transform: rotateY(-90deg);
+  transform: rotate3d(1, 1, 1, 45deg);
+  transform: rotate3d(1, 0.5, 0, -45deg);
+  transform: rotate3d(-1, 2.5, -2, 60deg);
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix */
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+  transform: rotate3d(-1, 2.5, -2, 60deg) translate3d(2rem, 50%, -3rem)
+    scale3d(2, 0.5, 3);
+}
+
+.transform-origin img {
+  transition: transform 2s ease-in-out;
+  /* transform-origin: x y z; */
+  transform-origin: 50% 50% 0;
+  transform-origin: 0 0;
+  transform-origin: top left;
+  transform-origin: top right;
+  transform-origin: top center;
+  transform-origin: bottom center;
+  transform-origin: bottom right;
+  transform-origin: bottom left;
+  transform-origin: center right;
+  transform-origin: -2rem -3rem;
+  transform-origin: 2rem 3rem;
+  transform-origin: 2rem 75%;
+  transform-origin: 25% 75%;
+  transform-origin: -5% -5%;
+  transform-origin: 30%;
+  transform-origin: 30% 90%;
+}
+
+.transform-origin img:hover {
+  transform: rotate(360deg);
+}
+
+.flip-card-1,
+.flip-card-2 {
+  border: thick solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  width: 600px;
+  height: 400px;
+
+  position: relative;
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+  perspective: 10rem;
+  transform-style: flat;
+  transform-style: preserve-3d;
+}
+
+.flip-card-2 {
+  transform: center right;
+}
+
+.flip-card-1:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-2:hover {
+  transform: translateX(-100%) rotateY(180deg);
+}
+
+.flip-card-1 img,
+.flip-card-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 50%;
+}
+
+.flip-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: visible;
+  backface-visibility: hidden;
+}
+
+.flip-front {
+  transform: rotateY(0deg);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
 }

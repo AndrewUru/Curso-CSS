@@ -11,7 +11,7 @@ atributo-de-mas-de-dos-palabras: otro-valor;
 
 h1 {
   color: rgba(255, 102, 46, 0.815);
-  background-color: black;
+  background-image: url();
 }
 
 /* Links de referncia y documentación:   
@@ -43,7 +43,7 @@ Selectores básicos
 
 /* Dar estilos con ID se considera un antipatrón*/
 #parrafo-dos {
-  background-color: skyblue;
+  background-color: rgb(116, 116, 215);
 }
 
 /* Dar estilos con clases nos permite reutilizar nuestro código CSS*/
@@ -56,11 +56,11 @@ Selectores básicos
 }
 
 .bg-skyblue {
-  background-color: skyblue;
+  background-color: rgb(79, 174, 212);
 }
 
 .bg-steelblue {
-  background-color: steelblue;
+  background-color: rgb(53, 101, 133);
 }
 
 .text-white {
@@ -77,7 +77,7 @@ Selectores básicos
 
 p {
   color: black;
-  font-size: x-large;
+  font-size: large;
 }
 
 .encabezados {
@@ -87,9 +87,17 @@ p {
 
 .volver-a-inicio {
   border-color: blue;
+  color: black;
   margin-left: 50%;
-  width: 20px;
-  height: 20px;
+  margin-right: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.card {
+  display: block;
+  margin-left: 50%;
+  margin-right: 50%;
 }
 
 /*Los selectores de hermanos van a aplicar a los elementos que son hermanos y estén 
