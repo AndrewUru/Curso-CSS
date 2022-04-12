@@ -278,7 +278,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
   animation-play-state: paused;
   animation-play-state: running;
   animation: myAwesomeAnimation 1.5s ease 250ms 7 alternate both running;
-  animation: myAwesomeAnimation 1.5s ease 250ms 7 alternate both running;
+  animation: myAwesomeAnimation 1.5s ease 250ms 6 alternate both running;
 }
 
 @keyframes myAwesomeAnimation2 {
