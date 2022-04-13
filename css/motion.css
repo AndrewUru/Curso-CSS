@@ -196,7 +196,6 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
   margin-bottom: 5rem;
   width: 600px;
   height: 400px;
-
   position: relative;
   cursor: pointer;
   transition: transform 1s ease-in-out;
@@ -206,7 +205,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
 }
 
 .flip-card-2 {
-  transform: center right;
+  transform: center top;
 }
 
 .flip-card-1:hover {
@@ -278,7 +277,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
   animation-play-state: paused;
   animation-play-state: running;
   animation: myAwesomeAnimation 1.5s ease 250ms 7 alternate both running;
-  animation: myAwesomeAnimation 1.5s ease 250ms 6 alternate both running;
+  animation: myAwesomeAnimation 1.5s ease 250ms infinite both running;
 }
 
 @keyframes myAwesomeAnimation2 {
@@ -336,6 +335,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
   animation: myAwesomeAnimation2 5s;
   animation: myAwesomeAnimation2 1s;
   animation: myAwesomeAnimation2 6s;
+  animation: myAwesomeAnimation2 10s infinite ease-in-out;
 }
 
 @keyframes multipleAnimation1 {
@@ -369,7 +369,8 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
 .animation-multiple {
   animation: multipleAnimation1 2s infinite;
   animation: multipleAnimation2 2s infinite;
-  animation: multipleAnimation1 2s infinite, multipleAnimation2 1s 3 ease-in-out;
+  animation: multipleAnimation1 4s infinite,
+    multipleAnimation2 2s infinite ease-in-out;
 }
 
 .motion-examples {
