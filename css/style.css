@@ -101,9 +101,11 @@ p {
 
 .parrafo-prueba {
   width: 100%;
-  height: 20vh;
+  height: auto;
   margin-top: 0;
   background-image: url("../assets/CSS3.jpg");
+  background-clip: border-box;
+  background-size: 100%;
   text-align: center;
 }
 
