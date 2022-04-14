@@ -277,7 +277,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
   animation-play-state: paused;
   animation-play-state: running;
   animation: myAwesomeAnimation 1.5s ease 250ms 7 alternate both running;
-  animation: myAwesomeAnimation 1.5s ease 250ms infinite both running;
+  animation: myAwesomeAnimation 1.5s ease 250ms 4 alternate-reverse running;
 }
 
 @keyframes myAwesomeAnimation2 {
@@ -335,7 +335,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
   animation: myAwesomeAnimation2 5s;
   animation: myAwesomeAnimation2 1s;
   animation: myAwesomeAnimation2 6s;
-  animation: myAwesomeAnimation2 10s infinite ease-in-out;
+  animation: myAwesomeAnimation2 10s 4 ease-in-out;
 }
 
 @keyframes multipleAnimation1 {
@@ -369,8 +369,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
 .animation-multiple {
   animation: multipleAnimation1 2s infinite;
   animation: multipleAnimation2 2s infinite;
-  animation: multipleAnimation1 4s infinite,
-    multipleAnimation2 2s infinite ease-in-out;
+  animation: multipleAnimation1 4s infinite, multipleAnimation2 2s 4 ease-in-out;
 }
 
 .motion-examples {
@@ -804,7 +803,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/transform-function
 .star-wars {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   color: #ffb13a;
