@@ -140,6 +140,10 @@ a {
   padding: 1rem;
 }
 
+.lista-documentacion ul {
+  width: auto;
+  height: auto;
+}
 /*Los selectores de hermanos van a aplicar a los elementos que son hermanos y estén 
 por debajo del elemento de referencia */
 
