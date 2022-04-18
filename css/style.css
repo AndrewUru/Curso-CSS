@@ -110,6 +110,8 @@ p {
 }
 
 .parrafo-prueba img {
+  width: auto;
+  height: auto;
   object-fit: cover;
 }
 
